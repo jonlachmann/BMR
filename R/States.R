@@ -21,16 +21,19 @@ states.Rcpp_dsge_gensys <- function(obj,percentiles=c(.05,.50,.95),var_names=NUL
     return=.states_int(obj,percentiles,var_names,use_mean,save,height,width)
 }
 
+#' @export
 states.Rcpp_dsge_uhlig <- function(obj,percentiles=c(.05,.50,.95),var_names=NULL,use_mean=FALSE,save=FALSE,height=13,width=11,...)
 {
     return=.states_int(obj,percentiles,var_names,use_mean,save,height,width)
 }
 
+#' @export
 states.Rcpp_dsgevar_gensys <- function(obj,percentiles=c(.05,.50,.95),var_names=NULL,use_mean=FALSE,save=FALSE,height=13,width=11,...)
 {
     return=.states_int(obj,percentiles,var_names,use_mean,save,height,width)
 }
 
+#' @export
 states.Rcpp_dsgevar_uhlig <- function(obj,percentiles=c(.05,.50,.95),var_names=NULL,use_mean=FALSE,save=FALSE,height=13,width=11,...)
 {
     return=.states_int(obj,percentiles,var_names,use_mean,save,height,width)
@@ -40,7 +43,7 @@ states.Rcpp_dsgevar_uhlig <- function(obj,percentiles=c(.05,.50,.95),var_names=N
 
 .states_int <- function(obj,percentiles=c(.05,.50,.95),var_names=NULL,use_mean=FALSE,save=FALSE,height=13,width=11,...)
 {
-    
+
     n_draws <- dim(obj$dsge_draws)[1]
 
     if (n_draws <= 0) {
@@ -50,10 +53,10 @@ states.Rcpp_dsgevar_uhlig <- function(obj,percentiles=c(.05,.50,.95),var_names=N
     #
 
     filt_vals <- obj$states()$filter_vals
-    
+
     n_data <- dim(filt_vals)[1]
     n_states <- dim(filt_vals)[2]
-    
+
     filt_vals_sorted <- apply(filt_vals,c(1,2),sort)
     filt_vals_sorted <- aperm(filt_vals_sorted,c(2,3,1))
 
@@ -64,7 +67,7 @@ states.Rcpp_dsgevar_uhlig <- function(obj,percentiles=c(.05,.50,.95),var_names=N
     upper_conf <- round(percentiles[3]*n_draws)
     mid_conf   <- round(percentiles[2]*n_draws)
     lower_conf <- round(percentiles[1]*n_draws)
-    
+
     #
 
     plot_vals <- array(NA,dim=c(n_data,4,n_states))
@@ -89,11 +92,11 @@ states.Rcpp_dsgevar_uhlig <- function(obj,percentiles=c(.05,.50,.95),var_names=N
 
     if (class(var_names) != "character") {
         var_names <- character(length=n_states)
-        for (i in 1:n_states) {  
+        for (i in 1:n_states) {
             var_names[i] <- paste("VAR",i,sep="")
         }
     }
-    
+
     #
     # plotting
 
@@ -103,7 +106,7 @@ states.Rcpp_dsgevar_uhlig <- function(obj,percentiles=c(.05,.50,.95),var_names=N
 
     MR <- 0; MC <- 0
     plot_pages <- 1
-    
+
     if(n_states < 4){
         MR <- n_states; MC <- 1
     }else if(n_states == 4){
@@ -136,7 +139,7 @@ states.Rcpp_dsgevar_uhlig <- function(obj,percentiles=c(.05,.50,.95),var_names=N
     state_count <- 1
 
     for (j in 1:plot_pages) {
-        
+
         if(save==TRUE){
             if(class(dev.list()) != "NULL"){dev.off()}
 

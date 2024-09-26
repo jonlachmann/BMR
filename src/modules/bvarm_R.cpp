@@ -63,8 +63,8 @@ RCPP_MODULE(bvarm_module)
         .field_readonly( "alpha_hat", &bm::bvarm::alpha_hat )
         .field_readonly( "Sigma_hat", &bm::bvarm::Sigma_hat )
 
-        .field_readonly( "alpha_pr_mean", &bm::bvarm::alpha_pr_mean )
-        .field_readonly( "alpha_pr_var", &bm::bvarm::alpha_pr_var )
+        .field( "alpha_pr_mean", &bm::bvarm::alpha_pr_mean )
+        .field( "alpha_pr_var", &bm::bvarm::alpha_pr_var )
 
         .field_readonly( "alpha_pt_mean", &bm::bvarm::alpha_pt_mean )
         .field_readonly( "alpha_pt_var", &bm::bvarm::alpha_pt_var )

@@ -16,6 +16,7 @@
 ##
 ################################################################################
 
+#' @export
 IRF.Rcpp_bvarm <- function(obj,periods=10,cumulative=FALSE,cumul_inds=NULL,var_names=NULL,percentiles=c(.05,.50,.95),
                            which_shock=NULL,which_response=NULL,shocks_row_order=TRUE,save=FALSE,save_format=c("pdf","eps"),
                            save_title=NULL,height=13,width=13,...)
@@ -24,6 +25,7 @@ IRF.Rcpp_bvarm <- function(obj,periods=10,cumulative=FALSE,cumul_inds=NULL,var_n
              save,save_format,save_title,height,width)
 }
 
+#' @export
 IRF.Rcpp_bvars <- function(obj,periods=10,cumulative=FALSE,cumul_inds=NULL,var_names=NULL,percentiles=c(.05,.50,.95),
                            which_shock=NULL,which_response=NULL,shocks_row_order=TRUE,save=FALSE,save_format=c("pdf","eps"),
                            save_title=NULL,height=13,width=13,...)
@@ -32,6 +34,7 @@ IRF.Rcpp_bvars <- function(obj,periods=10,cumulative=FALSE,cumul_inds=NULL,var_n
              save,save_format,save_title,height,width)
 }
 
+#' @export
 IRF.Rcpp_bvarcnw <- function(obj,periods=10,cumulative=FALSE,cumul_inds=NULL,var_names=NULL,percentiles=c(.05,.50,.95),
                              which_shock=NULL,which_response=NULL,shocks_row_order=TRUE,save=FALSE,save_format=c("pdf","eps"),
                              save_title=NULL,height=13,width=13,...)
@@ -40,6 +43,7 @@ IRF.Rcpp_bvarcnw <- function(obj,periods=10,cumulative=FALSE,cumul_inds=NULL,var
              save,save_format,save_title,height,width)
 }
 
+#' @export
 IRF.Rcpp_bvarinw <- function(obj,periods=10,cumulative=FALSE,cumul_inds=NULL,var_names=NULL,percentiles=c(.05,.50,.95),
                              which_shock=NULL,which_response=NULL,shocks_row_order=TRUE,save=FALSE,save_format=c("pdf","eps"),
                              save_title=NULL,height=13,width=13,...)
@@ -48,6 +52,7 @@ IRF.Rcpp_bvarinw <- function(obj,periods=10,cumulative=FALSE,cumul_inds=NULL,var
              save,save_format,save_title,height,width)
 }
 
+#' @export
 IRF.Rcpp_cvar <- function(obj,periods=10,cumulative=FALSE,cumul_inds=NULL,var_names=NULL,percentiles=c(.05,.50,.95),
                           which_shock=NULL,which_response=NULL,shocks_row_order=TRUE,save=FALSE,save_format=c("pdf","eps"),
                           save_title=NULL,height=13,width=13,...)
@@ -56,37 +61,44 @@ IRF.Rcpp_cvar <- function(obj,periods=10,cumulative=FALSE,cumul_inds=NULL,var_na
              save,save_format,save_title,height,width)
 }
 
+#' @export
 IRF.Rcpp_bvartvp <- function(obj,periods=10,which_irfs=NULL,var_names=NULL,percentiles=c(.05,.50,.95),
                              which_shock=NULL,which_response=NULL,save=FALSE,height=13,width=13,...)
 {
     .irf_bvartvp(obj,periods,which_irfs,var_names,percentiles,which_shock,which_response,save,height,width)
 }
 
+#' @export
 IRF.Rcpp_gensys <- function(obj,periods=10,var_names=NULL,shocks_cov=NULL,save=FALSE,height=13,width=13,...)
 {
     .irf_dsge(obj,periods,var_names,shocks_cov,save,height,width)
 }
 
+#' @export
 IRF.Rcpp_uhlig <- function(obj,periods=10,var_names=NULL,shocks_cov=NULL,save=FALSE,height=13,width=13,...)
 {
     .irf_dsge(obj,periods,var_names,shocks_cov,save,height,width)
 }
 
+#' @export
 IRF.Rcpp_dsge_gensys <- function(obj,periods=10,obs_irfs=FALSE,var_names=NULL,percentiles=c(.05,.50,.95),save=FALSE,height=13,width=13,...)
 {
     .irf_edsge(obj,periods,obs_irfs,var_names,percentiles,save,height,width)
 }
 
+#' @export
 IRF.Rcpp_dsge_uhlig <- function(obj,periods=10,obs_irfs=FALSE,var_names=NULL,percentiles=c(.05,.50,.95),save=FALSE,height=13,width=13,...)
 {
     .irf_edsge(obj,periods,obs_irfs,var_names,percentiles,save,height,width)
 }
 
+#' @export
 IRF.Rcpp_dsgevar_gensys <- function(obj,periods,var_names=NULL,percentiles=c(.05,.50,.95),plot_comparison=TRUE,save=FALSE,height=13,width=13,...)
 {
     .irf_dsgevar(obj,periods,var_names,percentiles,plot_comparison,save,height,width)
 }
 
+#' @export
 IRF.Rcpp_dsgevar_uhlig <- function(obj,periods,var_names=NULL,percentiles=c(.05,.50,.95),plot_comparison=TRUE,save=FALSE,height=13,width=13,...)
 {
     .irf_dsgevar(obj,periods,var_names,percentiles,plot_comparison,save,height,width)
