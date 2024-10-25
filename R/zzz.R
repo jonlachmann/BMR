@@ -16,6 +16,20 @@
 ##
 ################################################################################
 
-.onLoad <- function(libname, pkgname) {
-    suppressWarnings(Rcpp::loadRcppModules())
-}
+#' @useDynLib BMR, .registration = TRUE
+#' @importFrom Rcpp evalCpp
+#' @exportPattern "^[[:alpha:]]+"
+#' @export
+Rcpp::loadModule("bvarcnw_module", TRUE)
+Rcpp::loadModule("bvarinw_module", TRUE)
+Rcpp::loadModule("bvarm_module", TRUE)
+Rcpp::loadModule("bvars_module", TRUE)
+Rcpp::loadModule("bvartvp_module", TRUE)
+Rcpp::loadModule("cvar_module", TRUE)
+Rcpp::loadModule("dsge_gensys_module", TRUE)
+Rcpp::loadModule("dsge_uhlig_module", TRUE)
+Rcpp::loadModule("dsgevar_gensys_module", TRUE)
+Rcpp::loadModule("dsgevar_uhlig_module", TRUE)
+Rcpp::loadModule("dsgevar_uhlig_module", TRUE)
+Rcpp::loadModule("gensys_module", TRUE)
+Rcpp::loadModule("uhlig_module", TRUE)

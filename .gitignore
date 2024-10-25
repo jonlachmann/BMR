@@ -7,3 +7,4 @@
 /src/bmlib/include/armadillo*
 .Rproj.user
 *.tmp
+.idea

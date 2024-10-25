@@ -16,6 +16,7 @@
 ##
 ################################################################################
 
+#' @export
 FEVD.Rcpp_bvarm <- function(obj,periods=10,var_names=NULL,percentiles=c(.05,.50,.95),
                             which_shock=NULL,which_response=NULL,shocks_row_order=TRUE,
                             save=FALSE,save_format=c("pdf","eps"),
@@ -25,6 +26,7 @@ FEVD.Rcpp_bvarm <- function(obj,periods=10,var_names=NULL,percentiles=c(.05,.50,
               save,save_format,save_title,height,width)
 }
 
+#' @export
 FEVD.Rcpp_bvars <- function(obj,periods=10,var_names=NULL,percentiles=c(.05,.50,.95),
                             which_shock=NULL,which_response=NULL,shocks_row_order=TRUE,
                             save=FALSE,save_format=c("pdf","eps"),
@@ -34,6 +36,7 @@ FEVD.Rcpp_bvars <- function(obj,periods=10,var_names=NULL,percentiles=c(.05,.50,
               save,save_format,save_title,height,width)
 }
 
+#' @export
 FEVD.Rcpp_bvarcnw <- function(obj,periods=10,var_names=NULL,percentiles=c(.05,.50,.95),
                               which_shock=NULL,which_response=NULL,shocks_row_order=TRUE,
                               save=FALSE,save_format=c("pdf","eps"),
@@ -43,6 +46,7 @@ FEVD.Rcpp_bvarcnw <- function(obj,periods=10,var_names=NULL,percentiles=c(.05,.5
               save,save_format,save_title,height,width)
 }
 
+#' @export
 FEVD.Rcpp_bvarinw <- function(obj,periods=10,var_names=NULL,percentiles=c(.05,.50,.95),
                               which_shock=NULL,which_response=NULL,shocks_row_order=TRUE,
                               save=FALSE,save_format=c("pdf","eps"),
@@ -52,6 +56,7 @@ FEVD.Rcpp_bvarinw <- function(obj,periods=10,var_names=NULL,percentiles=c(.05,.5
               save,save_format,save_title,height,width)
 }
 
+#' @export
 FEVD.Rcpp_cvar <- function(obj,periods=10,var_names=NULL,percentiles=c(.05,.50,.95),
                            which_shock=NULL,which_response=NULL,shocks_row_order=TRUE,
                            save=FALSE,save_format=c("pdf","eps"),

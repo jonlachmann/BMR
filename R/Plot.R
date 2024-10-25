@@ -16,51 +16,61 @@
 ##
 ################################################################################
 
+#' @export
 plot.Rcpp_bvarm <- function(x,type=1,var_names=NULL,save=FALSE,height=13,width=13,...)
 {
     .plotbvar(x,type,var_names,save,height,width)
 }
 
+#' @export
 plot.Rcpp_bvars <- function(x,type=1,var_names=NULL,save=FALSE,height=13,width=13,...)
 {
     .plotbvar(x,type,var_names,save,height,width)
 }
 
+#' @export
 plot.Rcpp_bvarcnw <- function(x,type=1,var_names=NULL,save=FALSE,height=13,width=13,...)
 {
     .plotbvar(x,type,var_names,save,height,width)
 }
 
+#' @export
 plot.Rcpp_bvarinw <- function(x,type=1,var_names=NULL,save=FALSE,height=13,width=13,...)
 {
     .plotbvar(x,type,var_names,save,height,width)
 }
 
+#' @export
 plot.Rcpp_bvartvp <- function(x,var_names=NULL,percentiles=c(.05,.50,.95),save=FALSE,height=13,width=13,...)
 {
     .plotbvartvp(x,var_names,percentiles,save,height,width)
 }
 
+#' @export
 plot.Rcpp_cvar <- function(x,type=1,var_names=NULL,save=FALSE,height=13,width=13,...)
 {
     .plotbvar(x,type,var_names,save,height,width)
 }
 
+#' @export
 plot.Rcpp_dsge_gensys <- function(x,par_names=NULL,BinDenom=40,trace_plot=FALSE,save=FALSE,height=13,width=13,...)
 {
     .plotedsge(x,par_names,BinDenom,trace_plot,save,height,width)
 }
 
+#' @export
 plot.Rcpp_dsge_uhlig <- function(x,par_names=NULL,BinDenom=40,trace_plot=FALSE,save=FALSE,height=13,width=13,...)
 {
     .plotedsge(x,par_names,BinDenom,trace_plot,save,height,width)
 }
 
+#' @export
 plot.Rcpp_dsgevar_gensys <- function(x,par_names=NULL,BinDenom=40,MCMCplot=FALSE,save=FALSE,height=13,width=13,...)
 {
     .plotdsgevar(x,par_names,BinDenom,MCMCplot,save,height,width)
 }
 
+#' @export
 plot.Rcpp_dsgevar_uhlig <- function(x,par_names=NULL,BinDenom=40,MCMCplot=FALSE,save=FALSE,height=13,width=13,...)
 {
     .plotdsgevar(x,par_names,BinDenom,MCMCplot,save,height,width)
